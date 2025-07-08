@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guía de Post Cuidado CAROTONE</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #ff6b6b, #feca57);
+            color: white;
+            padding: 40px 30px;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .header p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+
+        .content {
+            padding: 40px 30px;
+        }
+
+        .warning-box {
+            background: #fff3cd;
+            border: 2px solid #ffeaa7;
+            border-radius: 15px;
+            padding: 20px;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .warning-box h3 {
+            color: #d63031;
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+        }
+
+        .routine-section {
+            margin-bottom: 40px;
+        }
+
+        .routine-title {
+            font-size: 1.8rem;
+            color: #2d3436;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .routine-card {
+            background: #f8f9fa;
+            border-radius: 15px;
+            padding: 25px;
+            margin-bottom: 20px;
+            border-left: 5px solid #00b894;
+        }
+
+        .step {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+            padding: 15px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .step-number {
+            background: #00b894;
+            color: white;
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            margin-right: 15px;
+            flex-shrink: 0;
+        }
+
+        .step-content {
+            flex: 1;
+        }
+
+        .step-title {
+            font-weight: bold;
+            color: #2d3436;
+            margin-bottom: 5px;
+        }
+
+        .step-description {
+            color: #636e72;
+            font-size: 0.9rem;
+        }
+
+        .tips-section {
+            background: #e8f4f8;
+            border-radius: 15px;
+            padding: 25px;
+            margin-bottom: 30px;
+        }
+
+        .tips-title {
+            font-size: 1.5rem;
+            color: #2d3436;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .tip-item {
+            background: white;
+            padding: 15px;
+            border-radius: 10px;
+            margin-bottom: 10px;
+            border-left: 4px solid #0984e3;
+        }
+
+        .timeline {
+            background: #f1f2f6;
+            border-radius: 15px;
+            padding: 25px;
+            margin-bottom: 30px;
+        }
+
+        .timeline-title {
+            font-size: 1.5rem;
+            color: #2d3436;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .timeline-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .timeline-week {
+            background: #6c5ce7;
+            color: white;
+            padding: 10px 15px;
+            border-radius: 25px;
+            font-weight: bold;
+            margin-right: 15px;
+            min-width: 100px;
+            text-align: center;
+        }
+
+        .timeline-description {
+            flex: 1;
+            background: white;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .contact-section {
+            background: linear-gradient(135deg, #a8e6cf, #88d8c0);
+            border-radius: 15px;
+            padding: 30px;
+            text-align: center;
+            color: #2d3436;
+        }
+
+        .contact-title {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+        }
+
+        .contact-info {
+            font-size: 1.1rem;
+            margin-bottom: 10px;
+        }
+
+        .whatsapp-button {
+            background: #25d366;
+            color: white;
+            padding: 12px 30px;
+            border-radius: 25px;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 15px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+
+        .whatsapp-button:hover {
+            background: #1ea952;
+            transform: translateY(-2px);
+        }
+
+        .icon {
+            font-size: 1.5rem;
+        }
+
+        .important-note {
+            background: #fee2e2;
+            border: 2px solid #fecaca;
+            border-radius: 15px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+
+        .important-note h4 {
+            color: #dc2626;
+            margin-bottom: 10px;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                margin: 10px;
+                border-radius: 15px;
+            }
+            
+            .header {
+                padding: 30px 20px;
+            }
+            
+            .header h1 {
+                font-size: 2rem;
+            }
+            
+            .content {
+                padding: 30px 20px;
+            }
+            
+            .routine-title {
+                font-size: 1.5rem;
+            }
+            
+            .step {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .step-number {
+                margin-bottom: 10px;
+                margin-right: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🌟 Guía de Post Cuidado Facial</h1>
+            <p>CAROTONE - Tu rutina para resultados perfectos</p>
+        </div>
+
+        <div class="content">
+            <div class="warning-box">
+                <h3>⚠ IMPORTANTE</h3>
+                <p>Sigue esta rutina al pie de la letra para obtener los mejores resultados y evitar efectos secundarios.</p>
+            </div>
+
+            <!-- Rutina Nocturna -->
+            <div class="routine-section">
+                <h2 class="routine-title">
+                    <span class="icon">🌙</span>
+                    Rutina Nocturna
+                </h2>
+                <div class="routine-card">
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <div class="step-content">
+                            <div class="step-title">Limpieza Facial</div>
+                            <div class="step-description">Lava tu cara con jabón suave neutro y agua tibia. Sécate con toalla limpia sin frotar.</div>
+                        </div>
+                    </div>
+                    
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <div class="step-content">
+                            <div class="step-title">Aplicación de CAROTONE</div>
+                            <div class="step-description">Aplica una capa fina solo en el rostro. Masajea suavemente hasta que se absorba completamente.</div>
+                        </div>
+                    </div>
+                    
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <div class="step-content">
+                            <div class="step-title">Deja Actuar</div>
+                            <div class="step-description">Permite que la crema trabaje toda la noche. No te laves la cara hasta la mañana.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Rutina Matutina -->
+            <div class="routine-section">
+                <h2 class="routine-title">
+                    <span class="icon">☀</span>
+                    Rutina Matutina
+                </h2>
+                <div class="routine-card">
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <div class="step-content">
+                            <div class="step-title">Limpieza Suave</div>
+                            <div class="step-description">Lava tu cara solo con agua tibia. No uses jabón en la mañana.</div>
+                        </div>
+                    </div>
+                    
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <div class="step-content">
+                            <div class="step-title">Hidratación</div>
+                            <div class="step-description">Aplica crema hidratante suave solo en el rostro. Espera 10 minutos antes del siguiente paso.</div>
+                        </div>
+                    </div>
+                    
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <div class="step-content">
+                            <div class="step-title">Protector Solar</div>
+                            <div class="step-description">Aplica protector solar SPF 30+ en rostro y cuello. ¡OBLIGATORIO para proteger el tratamiento facial!</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Consejos Importantes -->
+            <div class="tips-section">
+                <h2 class="tips-title">
+                    <span class="icon">💡</span>
+                    Consejos Importantes
+                </h2>
+                
+                <div class="tip-item">
+                    <strong>🧴 Cantidad correcta:</strong> Una capa fina es suficiente. No exageres con la cantidad.
+                </div>
+                
+                <div class="tip-item">
+                    <strong>🌞 Protección solar:</strong> Usa protector solar TODOS los días, incluso en días nublados.
+                </div>
+                
+                <div class="tip-item">
+                    <strong>⏰ Constancia:</strong> Sé constante con la rutina. Los resultados toman tiempo.
+                </div>
+                
+                <div class="tip-item">
+                    <strong>🚫 Evita el sol:</strong> No te expongas al sol directamente sin protección. Siempre usa protector solar SPF 30+.
+                </div>
+                
+                <div class="tip-item">
+                    <strong>💧 Hidratación:</strong> Bebe mucha agua para mantener la piel hidratada desde adentro.
+                </div>
+            </div>
+
+            <!-- Qué Esperar -->
+            <div class="timeline">
+                <h2 class="timeline-title">📅 ¿Qué Esperar?</h2>
+                
+                <div class="timeline-item">
+                    <div class="timeline-week">Semana 1</div>
+                    <div class="timeline-description">
+                        <strong>Adaptación:</strong> Tu piel se está acostumbrando. Puede haber leve descamación.
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-week">Semana 2</div>
+                    <div class="timeline-description">
+                        <strong>Mejoras iniciales:</strong> Notarás que tu piel se ve más luminosa y uniforme.
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-week">Semana 3-4</div>
+                    <div class="timeline-description">
+                        <strong>Resultados visibles:</strong> Reducción notable de manchas y mejor textura de piel.
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-week">Semana 6+</div>
+                    <div class="timeline-description">
+                        <strong>Resultados óptimos:</strong> Piel radiante, uniforme y con manchas significativamente reducidas.
+                    </div>
+                </div>
+            </div>
+
+            <!-- Nota Importante -->
+            <div class="important-note">
+                <h4>⚠ CUIDADO ESPECIAL</h4>
+                <p><strong>Si experimentas:</strong> Irritación severa, enrojecimiento extremo, o cualquier reacción alérgica, suspende el uso inmediatamente y contáctanos.</p>
+                <p><strong>Embarazo/Lactancia:</strong> Consulta con tu médico antes de usar.</p>
+            </div>
+
+            <!-- Contacto -->
+            <div class="contact-section">
+                <h2 class="contact-title">¿Tienes Dudas?</h2>
+                <div class="contact-info">📱 <strong>WhatsApp:</strong> +573247149582</div>
+                <div class="contact-info">📧 <strong>Email:</strong> ventas@imperiouslife.com</div>
+                <a href="https://wa.me/573247149582" class="whatsapp-button">💬 Escribir por WhatsApp</a>
+                <p style="margin-top: 15px; font-size: 0.9rem;">
+                    Estamos aquí para ayudarte en todo el proceso. ¡Tu satisfacción es nuestra prioridad! 🌟
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Animación suave al cargar la página
+        window.addEventListener('load', function() {
+            const elements = document.querySelectorAll('.step, .tip-item, .timeline-item');
+            elements.forEach((element, index) => {
+                element.style.opacity = '0';
+                element.style.transform = 'translateY(20px)';
+                element.style.transition = 'all 0.5s ease';
+                
+                setTimeout(() => {
+                    element.style.opacity = '1';
+                    element.style.transform = 'translateY(0)';
+                }, index * 100);
+            });
+        });
+
+        // Efecto de click en pasos
+        document.querySelectorAll('.step').forEach(step => {
+            step.addEventListener('click', function() {
+                this.style.transform = 'scale(1.02)';
+                setTimeout(() => {
+                    this.style.transform = 'scale(1)';
+                }, 200);
+            });
+        });
+    </script>
+</body>
+</html>
