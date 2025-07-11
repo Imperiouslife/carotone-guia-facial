@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Guía de Post Cuidado CAROTONE</title>
+    <title>Guía Completa CAROTONE | Imperious Life</title>
     <style>
         * {
             margin: 0;
@@ -21,7 +21,7 @@
         }
 
         .container {
-            max-width: 800px;
+            max-width: 900px;
             margin: 0 auto;
             background: white;
             border-radius: 20px;
@@ -36,6 +36,14 @@
             text-align: center;
         }
 
+        .brand {
+            font-size: 1.6rem;
+            font-weight: bold;
+            margin-bottom: 10px;
+            letter-spacing: 2px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
         .header h1 {
             font-size: 2.5rem;
             margin-bottom: 10px;
@@ -47,10 +55,46 @@
             opacity: 0.9;
         }
 
-        .content {
+        /* Tabs */
+        .tabs {
+            display: flex;
+            background: #f8f9fa;
+            border-bottom: 2px solid #e9ecef;
+        }
+
+        .tab-button {
+            flex: 1;
+            padding: 20px;
+            background: #f8f9fa;
+            border: none;
+            cursor: pointer;
+            font-size: 1.1rem;
+            font-weight: bold;
+            color: #6c757d;
+            transition: all 0.3s ease;
+            border-bottom: 3px solid transparent;
+        }
+
+        .tab-button.active {
+            background: white;
+            color: #2d3436;
+            border-bottom: 3px solid #00b894;
+        }
+
+        .tab-button:hover {
+            background: #e9ecef;
+        }
+
+        .tab-content {
+            display: none;
             padding: 40px 30px;
         }
 
+        .tab-content.active {
+            display: block;
+        }
+
+        /* Estilos comunes */
         .warning-box {
             background: #fff3cd;
             border: 2px solid #ffeaa7;
@@ -189,12 +233,112 @@
             box-shadow: 0 2px 5px rgba(0,0,0,0.1);
         }
 
-        .contact-section {
+        .important-note {
+            background: #fee2e2;
+            border: 2px solid #fecaca;
+            border-radius: 15px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+
+        .important-note h4 {
+            color: #dc2626;
+            margin-bottom: 10px;
+        }
+
+        /* Estilos específicos para clima caliente */
+        .main-answer {
+            background: linear-gradient(135deg, #00b894, #00cec9);
+            color: white;
+            padding: 20px;
+            border-radius: 15px;
+            text-align: center;
+            margin-bottom: 25px;
+            font-size: 1.1rem;
+            font-weight: bold;
+        }
+
+        .warning-section {
+            background: #fff3cd;
+            border: 2px solid #ffc107;
+            border-radius: 15px;
+            padding: 20px;
+            margin-bottom: 25px;
+        }
+
+        .warning-section h3 {
+            color: #856404;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .step-list {
+            background: #f8f9fa;
+            border-radius: 10px;
+            padding: 15px;
+            border-left: 4px solid #00b894;
+        }
+
+        .step-item {
+            margin-bottom: 8px;
+            padding-left: 5px;
+        }
+
+        .protection-section {
+            background: linear-gradient(135deg, #74b9ff, #0984e3);
+            color: white;
+            border-radius: 15px;
+            padding: 20px;
+            margin-bottom: 25px;
+        }
+
+        .protection-title {
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+
+        .protection-item {
+            background: rgba(255,255,255,0.1);
+            padding: 10px 15px;
+            border-radius: 8px;
+            margin-bottom: 8px;
+            backdrop-filter: blur(10px);
+        }
+
+        .recommendation {
+            background: #e8f4f8;
+            border-radius: 15px;
+            padding: 20px;
+            margin-bottom: 25px;
+            border-left: 5px solid #00cec9;
+        }
+
+        .recommendation h3 {
+            color: #2d3436;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .result-section {
             background: linear-gradient(135deg, #a8e6cf, #88d8c0);
+            border-radius: 15px;
+            padding: 20px;
+            text-align: center;
+            margin-bottom: 25px;
+            color: #2d3436;
+        }
+
+        .contact-section {
+            background: linear-gradient(135deg, #2d3436, #636e72);
             border-radius: 15px;
             padding: 30px;
             text-align: center;
-            color: #2d3436;
+            color: white;
         }
 
         .contact-title {
@@ -228,19 +372,6 @@
             font-size: 1.5rem;
         }
 
-        .important-note {
-            background: #fee2e2;
-            border: 2px solid #fecaca;
-            border-radius: 15px;
-            padding: 20px;
-            margin: 20px 0;
-        }
-
-        .important-note h4 {
-            color: #dc2626;
-            margin-bottom: 10px;
-        }
-
         @media (max-width: 768px) {
             .container {
                 margin: 10px;
@@ -255,7 +386,7 @@
                 font-size: 2rem;
             }
             
-            .content {
+            .tab-content {
                 padding: 30px 20px;
             }
             
@@ -272,17 +403,34 @@
                 margin-bottom: 10px;
                 margin-right: 0;
             }
+
+            .tab-button {
+                font-size: 0.9rem;
+                padding: 15px 10px;
+            }
         }
     </style>
 </head>
 <body>
     <div class="container">
         <div class="header">
-            <h1>🌟 Guía de Post Cuidado Facial</h1>
-            <p>CAROTONE - Tu rutina para resultados perfectos</p>
+            <div class="brand">IMPERIOUS LIFE</div>
+            <h1>🌟 Guía Completa CAROTONE</h1>
+            <p>Todo lo que necesitas para resultados perfectos</p>
         </div>
 
-        <div class="content">
+        <!-- Tabs -->
+        <div class="tabs">
+            <button class="tab-button active" onclick="openTab(event, 'post-cuidado')">
+                🌙 Post Cuidado Facial
+            </button>
+            <button class="tab-button" onclick="openTab(event, 'clima-caliente')">
+                🌞 Climas Calientes
+            </button>
+        </div>
+
+        <!-- Tab 1: Post Cuidado Facial -->
+        <div id="post-cuidado" class="tab-content active">
             <div class="warning-box">
                 <h3>⚠ IMPORTANTE</h3>
                 <p>Sigue esta rutina al pie de la letra para obtener los mejores resultados y evitar efectos secundarios.</p>
@@ -421,24 +569,114 @@
                 <p><strong>Si experimentas:</strong> Irritación severa, enrojecimiento extremo, o cualquier reacción alérgica, suspende el uso inmediatamente y contáctanos.</p>
                 <p><strong>Embarazo/Lactancia:</strong> Consulta con tu médico antes de usar.</p>
             </div>
+        </div>
 
-            <!-- Contacto -->
-            <div class="contact-section">
-                <h2 class="contact-title">¿Tienes Dudas?</h2>
-                <div class="contact-info">📱 <strong>WhatsApp:</strong> +573247149582</div>
-                <div class="contact-info">📧 <strong>Email:</strong> ventas@imperiouslife.com</div>
-                <a href="https://wa.me/573247149582" class="whatsapp-button">💬 Escribir por WhatsApp</a>
-                <p style="margin-top: 15px; font-size: 0.9rem;">
-                    Estamos aquí para ayudarte en todo el proceso. ¡Tu satisfacción es nuestra prioridad! 🌟
-                </p>
+        <!-- Tab 2: Climas Calientes -->
+        <div id="clima-caliente" class="tab-content">
+            <div class="main-answer">
+                🌟 ¡SÍ puedes usar CAROTONE, pero necesitas cuidados EXTRA por las altas temperaturas de tu zona!
             </div>
+
+            <div class="warning-section">
+                <h3>⚠️ ¿Por qué el riesgo de manchas?</h3>
+                <p>En climas muy calientes, la piel es más sensible al sol y los productos aclaradores pueden causar manchas oscuras si no te proteges correctamente.</p>
+            </div>
+
+            <!-- Rutina Nocturna -->
+            <div class="routine-section">
+                <h2 class="routine-title">
+                    🌙 NOCHE (igual que siempre)
+                </h2>
+                <div class="step-list">
+                    <div class="step-item">• Aplica CAROTONE solo en la noche</div>
+                    <div class="step-item">• Lava tu cara antes con jabón suave</div>
+                    <div class="step-item">• Capa fina en el rostro únicamente</div>
+                </div>
+            </div>
+
+            <!-- Rutina Matutina -->
+            <div class="routine-section">
+                <h2 class="routine-title">
+                    ☀️ MAÑANA (CUIDADO ESPECIAL)
+                </h2>
+                <div class="step-list">
+                    <div class="step-item">• Lava solo con agua tibia</div>
+                    <div class="step-item">• Crema hidratante suave</div>
+                    <div class="step-item">• <strong>PROTECTOR SOLAR SPF 50+</strong> (no 30+)</div>
+                    <div class="step-item">• <strong>Reaplicar cada 2-3 horas</strong> por el calor</div>
+                </div>
+            </div>
+
+            <!-- Protección Extra -->
+            <div class="protection-section">
+                <h2 class="protection-title">🛡️ PROTECCIÓN EXTRA PARA CLIMA CALIENTE</h2>
+                
+                <div class="protection-item">
+                    <strong>🕐 Evita el sol 10am-4pm</strong> (horario más fuerte)
+                </div>
+                
+                <div class="protection-item">
+                    <strong>👒 Usa sombrero o gorra</strong> cuando salgas
+                </div>
+                
+                <div class="protection-item">
+                    <strong>💧 Protector resistente al sudor</strong>
+                </div>
+                
+                <div class="protection-item">
+                    <strong>🌳 Busca sombra</strong> siempre que puedas
+                </div>
+            </div>
+
+            <!-- Recomendación -->
+            <div class="recommendation">
+                <h3>💡 MI RECOMENDACIÓN:</h3>
+                <p>Empieza usando CAROTONE <strong>día de por medio</strong> las primeras 2 semanas para que tu piel se adapte al clima.</p>
+            </div>
+
+            <!-- Resultado -->
+            <div class="result-section">
+                <h3 style="margin-bottom: 10px;">✨ ¿El resultado?</h3>
+                <p><strong>Tendrás una piel hermosa SIN manchas, solo necesitas ser MÁS estricta con la protección solar.</strong></p>
+            </div>
+        </div>
+
+        <!-- Contacto (compartido) -->
+        <div class="contact-section">
+            <h2 class="contact-title">¿Tienes Dudas?</h2>
+            <div class="contact-info">📱 <strong>WhatsApp:</strong> +573247149582</div>
+            <div class="contact-info">📧 <strong>Email:</strong> ventas@imperiouslife.com</div>
+            <a href="https://wa.me/573247149582" class="whatsapp-button">💬 Escribir por WhatsApp</a>
+            <p style="margin-top: 15px; font-size: 0.9rem;">
+                <strong>IMPERIOUS LIFE</strong> - Tu belleza, nuestra pasión 🌟
+            </p>
         </div>
     </div>
 
     <script>
+        function openTab(evt, tabName) {
+            var i, tabcontent, tablinks;
+            
+            // Ocultar todo el contenido de tabs
+            tabcontent = document.getElementsByClassName("tab-content");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].classList.remove("active");
+            }
+            
+            // Remover clase active de todos los botones
+            tablinks = document.getElementsByClassName("tab-button");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].classList.remove("active");
+            }
+            
+            // Mostrar el tab seleccionado y marcar el botón como activo
+            document.getElementById(tabName).classList.add("active");
+            evt.currentTarget.classList.add("active");
+        }
+
         // Animación suave al cargar la página
         window.addEventListener('load', function() {
-            const elements = document.querySelectorAll('.step, .tip-item, .timeline-item');
+            const elements = document.querySelectorAll('.step, .tip-item, .timeline-item, .step-item, .protection-item');
             elements.forEach((element, index) => {
                 element.style.opacity = '0';
                 element.style.transform = 'translateY(20px)';
